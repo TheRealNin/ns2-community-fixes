@@ -38,7 +38,10 @@ local fixes = {
 "Ladder",
 "Railgun",
 "Robotics",
-"Cheats"
+"Cheats",
+"Xenocide",
+"Ragdoll",
+"OnosCrouch"
 }
 
 for i = 1, #fixes do
