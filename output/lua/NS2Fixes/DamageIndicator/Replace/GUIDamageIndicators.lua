@@ -31,7 +31,7 @@ local kDamageTextures =
 
 GUIDamageIndicators.kDamageIndicatorOffset = GUIScale(48)
 
-local kHitEffectSize = 720 -- considers GUIScale already
+local kHitEffectSize = 320 -- was 720 -- considers GUIScale already
 
 function GUIDamageIndicators:Initialize()
 
@@ -96,7 +96,7 @@ function GUIDamageIndicators:Update(deltaTime)
     local currentIndex = 1
     for i, indicatorItem in ipairs(self.indicatorItems) do
         local currentAlpha = damageIndicators[currentIndex]
-        local currentSize = math.max(math.pow(currentAlpha, 6), GUIDamageIndicators.kMinIndicatorSize)
+        local currentSize = GUIScale(math.max(math.pow(currentAlpha, 6), GUIDamageIndicators.kMinIndicatorSize))
         local currentAngle = damageIndicators[currentIndex + 1]
         indicatorItem:SetColor(Color(1, 1, 1, currentAlpha))
         indicatorItem:SetSize(Vector(GUIDamageIndicators.kIndicatorSize * currentSize, GUIDamageIndicators.kIndicatorSize * currentSize, 0))
@@ -145,7 +145,7 @@ function GUIDamageIndicators:OnTakeDamage(position, rotation, hitType)
     hitEffect:SetTextureCoordinates(unpack(pixelCoords))
     hitEffect:SetLayer(0)
     
-    hitEffect:FadeOut(1.45, "FADEOUT_HITEFFECT", AnimateQuadratic, DestroyHitEffect)
+    hitEffect:FadeOut(1.25, "FADEOUT_HITEFFECT", AnimateQuadratic, DestroyHitEffect)
 
 end
 
