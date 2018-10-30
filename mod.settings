@@ -1,0 +1,13 @@
+name        = "NS2 Community Fixes"
+source_dir  = ""
+output_dir  = "output"
+description = [=[ModID: 4292cdec
+
+A colleciton of the NS2 community fixes that are waiting to be pulled in to the next build (or are going to be on the github soon). Server operators can subscribe to this mod to get fixes sooner.
+
+
+]=]
+image       = "preview.jpg"
+tag_modtype = "Gameplay Tweak"
+tag_support = "Must be run on Server"
+publish_id = "4292cdec"
