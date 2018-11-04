@@ -40,7 +40,6 @@ local fixes = {
 "Robotics",
 "Cheats",
 "Xenocide",
-"Ragdoll",
 "OnosCrouch",
 "ArmorFix",
 "Voting",
