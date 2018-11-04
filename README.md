@@ -11,3 +11,8 @@ The fixes are so far as follows:
 * Ladder: Makes climbing ladders faster and less glitchy
 * Railgun: Allows shooting railguns into skyboxes
 * Robotics: Fixes a rare crash related to building something at a robotics factory and then crashing/leaving the server
+* Xenocide: Fix xenocide sometimes not dealing any damage
+* OnosCrouch: Fix onos crouch exploit letting you see through walls
+* ArmorFix: Round armor to nearest integer instead of rounding up
+* Voting: Fix voting so that it accounts for players leaving the server and also allowing players to change their minds
+* ForceEvenTeams: Fix force even teams vote to reset the game if a game is ongoing
