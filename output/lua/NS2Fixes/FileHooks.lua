@@ -41,7 +41,10 @@ local fixes = {
 "Cheats",
 "Xenocide",
 "Ragdoll",
-"OnosCrouch"
+"OnosCrouch",
+"ArmorFix",
+"Voting",
+"ForceEvenTeams"
 }
 
 for i = 1, #fixes do
