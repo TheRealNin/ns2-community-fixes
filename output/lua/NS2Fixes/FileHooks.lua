@@ -43,7 +43,8 @@ local fixes = {
 "OnosCrouch",
 "ArmorFix",
 "Voting",
-"ForceEvenTeams"
+"ForceEvenTeams",
+"SetPoseParam"
 }
 
 for i = 1, #fixes do
