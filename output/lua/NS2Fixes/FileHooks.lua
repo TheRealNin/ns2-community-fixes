@@ -30,7 +30,7 @@ local function SetupFilehookFolders(modPath)
 end
 
 local fixes = { 
-"BotBrain",
+--"BotBrain",
 "CommanderSensor",
 "DamageIndicator",
 "DoorsByDragon",
