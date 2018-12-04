@@ -15,7 +15,8 @@ Script.Load("lua/GUIAnimatedScript.lua")
 class 'GUIDamageIndicators' (GUIAnimatedScript)
 
 GUIDamageIndicators.kIndicatorSize = 768
-GUIDamageIndicators.kMinIndicatorSize = GUIScale(0.125)
+GUIDamageIndicators.kMaxIndicatorSize = 0.5
+GUIDamageIndicators.kMinIndicatorSize = 0.125
 GUIDamageIndicators.kArrowCenterOffset = GUIScale(150)
 GUIDamageIndicators.kDefaultIndicatorPosition = Vector(-GUIDamageIndicators.kIndicatorSize / 2, -GUIDamageIndicators.kIndicatorSize / 2, 0)
 
@@ -96,7 +97,7 @@ function GUIDamageIndicators:Update(deltaTime)
     local currentIndex = 1
     for i, indicatorItem in ipairs(self.indicatorItems) do
         local currentAlpha = damageIndicators[currentIndex]
-        local currentSize = GUIScale(math.max(math.pow(currentAlpha, 6), GUIDamageIndicators.kMinIndicatorSize))
+        local currentSize = GUIScale(math.max(math.pow(currentAlpha, 6) * GUIDamageIndicators.kMaxIndicatorSize, GUIDamageIndicators.kMinIndicatorSize))
         local currentAngle = damageIndicators[currentIndex + 1]
         indicatorItem:SetColor(Color(1, 1, 1, currentAlpha))
         indicatorItem:SetSize(Vector(GUIDamageIndicators.kIndicatorSize * currentSize, GUIDamageIndicators.kIndicatorSize * currentSize, 0))
