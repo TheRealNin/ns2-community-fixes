@@ -16,3 +16,7 @@ function Door:OnUpdateAnimationInput(modelMixin)
     modelMixin:SetAnimationInput("lock", false)
     
 end
+
+
+
+Shared.LinkClassToMap("Door", Door.kMapName, {}, true)
