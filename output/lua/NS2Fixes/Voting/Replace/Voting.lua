@@ -284,6 +284,18 @@ if Server then
         
     end
     Event.Hook("UpdateServer", OnUpdateVoting)
+	
+	-- this is a HORRIBLE hack for shine's HORRIBLE hack
+	local oldgetinfo = debug.getinfo
+	debug.getinfo = function(thread, f, what)
+		local info = oldgetinfo(thread, f, what)
+		
+		if f == "S" and info.source == "@lua/NS2Fixes/Voting/Replace/Voting.lua" then
+			info.source = "@lua/Voting.lua"
+		end
+		
+		return info
+	end
     
 end
 
