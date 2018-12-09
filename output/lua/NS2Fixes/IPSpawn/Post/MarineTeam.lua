@@ -10,7 +10,7 @@ end
 local oldResetTeam = MarineTeam.ResetTeam
 function MarineTeam:ResetTeam()
 	self.spawnedPortals = 0
-	oldResetTeam(self)
+	return oldResetTeam(self)
 end
 
 -- mostly copied from vanilla
