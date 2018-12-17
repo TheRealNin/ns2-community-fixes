@@ -45,7 +45,8 @@ local fixes = {
 "Voting",
 "ForceEvenTeams",
 "SetPoseParam",
-"IPSpawn"
+"IPSpawn",
+"SpecAlien"
 }
 
 for i = 1, #fixes do
