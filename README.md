@@ -17,3 +17,4 @@ The fixes are so far as follows:
 * ForceEvenTeams: Fix force even teams vote to reset the game if a game is ongoing
 * SetPoseParam: Works around a engine bug relating to spectating something that cannot set pose params
 * IPSpawn: Spawns an extra Infantry Portal if a 9th player joins marines before reset votes are forbidden.
+* SpecAliens: Alien vision now synchronizes for spectators when viewing a player from first person.
