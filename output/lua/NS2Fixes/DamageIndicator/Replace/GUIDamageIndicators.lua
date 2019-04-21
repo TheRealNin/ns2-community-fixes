@@ -17,7 +17,7 @@ class 'GUIDamageIndicators' (GUIAnimatedScript)
 GUIDamageIndicators.kIndicatorSize = 768
 GUIDamageIndicators.kMaxIndicatorSize = 0.5
 GUIDamageIndicators.kMinIndicatorSize = 0.125
-GUIDamageIndicators.kArrowCenterOffset = GUIScale(150)
+GUIDamageIndicators.kArrowCenterOffset = 150
 GUIDamageIndicators.kDefaultIndicatorPosition = Vector(-GUIDamageIndicators.kIndicatorSize / 2, -GUIDamageIndicators.kIndicatorSize / 2, 0)
 
 local kNormalCoords = {0, 0, 1, 1}
@@ -100,11 +100,11 @@ function GUIDamageIndicators:Update(deltaTime)
         local currentSize = GUIScale(math.max(math.pow(currentAlpha, 6) * GUIDamageIndicators.kMaxIndicatorSize, GUIDamageIndicators.kMinIndicatorSize))
         local currentAngle = damageIndicators[currentIndex + 1]
         indicatorItem:SetColor(Color(1, 1, 1, currentAlpha))
-        indicatorItem:SetSize(Vector(GUIDamageIndicators.kIndicatorSize * currentSize, GUIDamageIndicators.kIndicatorSize * currentSize, 0))
+        indicatorItem:SetSize(Vector(GUIScale(GUIDamageIndicators.kIndicatorSize * currentSize), GUIScale(GUIDamageIndicators.kIndicatorSize * currentSize), 0))
         indicatorItem:SetRotation(Vector(0, 0, currentAngle + math.pi))
         local direction = Vector(math.sin(currentAngle), math.cos(currentAngle), 0)
         direction:Normalize()
-        local rotatedPosition = GUIDamageIndicators.kDefaultIndicatorPosition * currentSize + (direction * GUIDamageIndicators.kArrowCenterOffset)
+        local rotatedPosition = GUIScale(GUIDamageIndicators.kDefaultIndicatorPosition * currentSize + (direction * GUIDamageIndicators.kArrowCenterOffset))
         indicatorItem:SetPosition(rotatedPosition)
         indicatorItem:SetBlendTechnique(GUIItem.Add)
         currentIndex = currentIndex + 2
@@ -176,7 +176,7 @@ function GUIDamageIndicators:CreateIndicatorItem()
     end
 
     local newIndicator = GUIManager:CreateGraphicItem()
-    newIndicator:SetSize(Vector(GUIDamageIndicators.kIndicatorSize, GUIDamageIndicators.kIndicatorSize, 0))
+    newIndicator:SetSize(Vector(GUIScale(GUIDamageIndicators.kIndicatorSize), GUIScale(GUIDamageIndicators.kIndicatorSize), 0))
     newIndicator:SetAnchor(GUIItem.Middle, GUIItem.Center)
     newIndicator:SetPosition(GUIDamageIndicators.kDefaultIndicatorPosition)
     newIndicator:SetTexture("ui/hud_damage_arrow.dds")
