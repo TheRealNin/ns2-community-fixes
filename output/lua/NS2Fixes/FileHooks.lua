@@ -39,13 +39,13 @@ local fixes = {
 "Railgun",
 "Robotics",
 "Cheats",
-"Xenocide",
+--"Xenocide",
 "OnosCrouch",
 "ArmorFix",
 "Voting",
 "ForceEvenTeams",
 "SetPoseParam",
-"IPSpawn",
+--"IPSpawn",
 "SpecAlien"
 }
 
