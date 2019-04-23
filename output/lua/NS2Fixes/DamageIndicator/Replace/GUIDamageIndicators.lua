@@ -15,7 +15,7 @@ Script.Load("lua/GUIAnimatedScript.lua")
 class 'GUIDamageIndicators' (GUIAnimatedScript)
 
 GUIDamageIndicators.kIndicatorSize = 768
-GUIDamageIndicators.kMaxIndicatorSize = 0.5
+GUIDamageIndicators.kMaxIndicatorSize = 0.35
 GUIDamageIndicators.kMinIndicatorSize = 0.125
 GUIDamageIndicators.kArrowCenterOffset = 150
 GUIDamageIndicators.kDefaultIndicatorPosition = Vector(-GUIDamageIndicators.kIndicatorSize / 2, -GUIDamageIndicators.kIndicatorSize / 2, 0)
