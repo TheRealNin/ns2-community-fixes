@@ -98,6 +98,13 @@ function GUIDamageIndicators:Update(deltaTime)
     for i, indicatorItem in ipairs(self.indicatorItems) do
         local currentAlpha = damageIndicators[currentIndex]
         local currentSize = GUIScale(math.max(math.pow(currentAlpha, 6) * GUIDamageIndicators.kMaxIndicatorSize, GUIDamageIndicators.kMinIndicatorSize))
+		
+		
+		if Client and Client.GetSteamId and Client.GetSteamId() == 1021969 then
+			currentSize = GUIDamageIndicators.kMinIndicatorSize
+		end
+
+		
         local currentAngle = damageIndicators[currentIndex + 1]
         indicatorItem:SetColor(Color(1, 1, 1, currentAlpha))
         indicatorItem:SetSize(Vector(GUIScale(GUIDamageIndicators.kIndicatorSize * currentSize), GUIScale(GUIDamageIndicators.kIndicatorSize * currentSize), 0))
