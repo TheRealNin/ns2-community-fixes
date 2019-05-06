@@ -32,7 +32,7 @@ end
 local fixes = { 
 --"BotBrain",
 "CommanderSensor",
-"DamageIndicator",
+--"DamageIndicator",
 "DoorsByDragon",
 "Hallucinations",
 "Ladder",
