@@ -6,7 +6,7 @@ function GetShouldHitIndicatorFixedDefault()
 	-- handschuh and ironhorse dislike the pop. Everyone else seems to love it. 
 	-- As a courtesy, lets disable this for the dislikers by default.
 	if ownedBadges and (ownedBadges["playtester"] or ownedBadges["dev"] or ownedBadges["community_dev"]) then
-		hitIndicatorFixed = hitIndicatorFixed
+		hitIndicatorFixed = false
 	end
 	
 	return hitIndicatorFixed
